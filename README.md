@@ -1,5 +1,42 @@
 # CSS style guide
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Rules (anatomy and syntax)](#rules-anatomy-and-syntax)
+	- [Place related selectors on the same line](#place-related-selectors-on-the-same-line)
+	- [Place a property-value pair on the same line](#place-a-property-value-pair-on-the-same-line)
+	- [Place each declaration on its own (new) line](#place-each-declaration-on-its-own-new-line)
+	- [End each declaration with a semicolon](#end-each-declaration-with-a-semicolon)
+	- [Declaration order: positioning > box model > typographic > visual](#declaration-order-positioning--box-model--typographic--visual)
+- [Whitespace](#whitespace)
+	- [Use tabs to indent declarations](#use-tabs-to-indent-declarations)
+	- [Place a space before the opening brace](#place-a-space-before-the-opening-brace)
+	- [Place the closing bracket on its own (new) line](#place-the-closing-bracket-on-its-own-new-line)
+	- [Place a space after the property-value delimiting colon](#place-a-space-after-the-property-value-delimiting-colon)
+	- [Place the first declaration on a new line after the opening brace](#place-the-first-declaration-on-a-new-line-after-the-opening-brace)
+	- [Limit line length to 80 characters](#limit-line-length-to-80-characters)
+- [Indenting](#indenting)
+	- [Don't indent related rules / rulesets](#dont-indent-related-rules--rulesets)
+- [Comments](#comments)
+	- [Don't describe the obvious](#dont-describe-the-obvious)
+	- [Use sectioning comments if 1 CSS file contains multiple sections](#use-sectioning-comments-if-1-css-file-contains-multiple-sections)
+	- [Use inline comments to explain a specific rule or declaration](#use-inline-comments-to-explain-a-specific-rule-or-declaration)
+- [Naming conventions](#naming-conventions)
+	- [Use camelCase when naming class groups](#use-camelcase-when-naming-class-groups)
+	- [Use PascalCase when naming the `Block` of a Component](#use-pascalcase-when-naming-the-block-of-a-component)
+	- [Delimit elements with two underscores](#delimit-elements-with-two-underscores)
+	- [Delimit modifiers with two hyphens](#delimit-modifiers-with-two-hyphens)
+- [Selectors](#selectors)
+	- [Use unambiguous and explicit selectors](#use-unambiguous-and-explicit-selectors)
+	- [Aim to write reusable classes](#aim-to-write-reusable-classes)
+	- [Performance](#performance)
+- [Specificity](#specificity)
+	- [Don't use IDs](#dont-use-ids)
+	- [Use the least number of selectors required to style an element](#use-the-least-number-of-selectors-required-to-style-an-element)
+	- [Use `!important` with care](#use-important-with-care)
+- [Media queries](#media-queries)
+
 ## Introduction
 
 The CSS style guide in use at Procurios is based on the work of various sources in the past few years. Most of it is based on our own experience with maintaining a large codebase. An important source of inspiration is Harry Roberts, who published his work on [cssguidelin.es](http://cssguidelin.es/). Another inspiring source is [Code Guide, by @mdo](http://codeguide.co/).
@@ -60,6 +97,8 @@ A typical CSS rule based on this style guide looks as following:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Place a property-value pair on the same line
 
 ```css
@@ -74,6 +113,8 @@ A typical CSS rule based on this style guide looks as following:
 	display: block;
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Place each declaration on its own (new) line
 
@@ -90,6 +131,8 @@ A typical CSS rule based on this style guide looks as following:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### End each declaration with a semicolon
 
 ```css
@@ -105,6 +148,8 @@ A typical CSS rule based on this style guide looks as following:
 	float: left;
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Declaration order: positioning > box model > typographic > visual
 
@@ -135,6 +180,8 @@ For example:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ## Whitespace
 
 ### Use tabs to indent declarations
@@ -155,6 +202,8 @@ For example:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Place a space before the opening brace
 
 ```css
@@ -168,6 +217,8 @@ For example:
 	display: block;
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Place the closing bracket on its own (new) line
 
@@ -184,6 +235,8 @@ For example:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Place a space after the property-value delimiting colon
 
 ```css
@@ -197,6 +250,8 @@ For example:
 	display: block;
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Place the first declaration on a new line after the opening brace
 
@@ -213,6 +268,8 @@ For example:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Limit line length to 80 characters
 
 Where possible, limit the length of a line to a maximum of 80 characters.
@@ -226,6 +283,8 @@ Where possible, limit the length of a line to a maximum of 80 characters.
 ```
 
 There will be unavoidable exceptions to this rule (fe. URLs, gradient syntax).
+
+[↑ back to top](#table-of-contents)
 
 ## Indenting
 
@@ -261,6 +320,8 @@ Our naming convention should be sufficient to visualize relations between rules.
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ## Comments
 
 ### Don't describe the obvious
@@ -272,6 +333,8 @@ We use comments in our CSS files for two purposes:
 
 There is no such thing as too much commenting -- as long as a comment improves the maintainability or interchangeability.
 
+[↑ back to top](#table-of-contents)
+
 ### Use sectioning comments if 1 CSS file contains multiple sections
 
 ```css
@@ -281,6 +344,8 @@ There is no such thing as too much commenting -- as long as a comment improves t
 ```
 
 Please note that multiple sections in 1 file might be a code smell. Consider splitting discrete chunks of code into their own files.
+
+[↑ back to top](#table-of-contents)
 
 ### Use inline comments to explain a specific rule or declaration
 
@@ -294,6 +359,8 @@ Please note that multiple sections in 1 file might be a code smell. Consider spl
 	overflow: hidden; /** This declaration needs some explanation */
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ## Naming conventions
 
@@ -321,6 +388,8 @@ To take an analogy:
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Use camelCase when naming class groups
 
 ```css
@@ -342,6 +411,8 @@ To take an analogy:
 	...
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Use PascalCase when naming the `Block` of a Component
 
@@ -367,6 +438,8 @@ At Procurios isolated web components are conveniently named Component. Mind the 
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Delimit elements with two underscores
 
 ```css
@@ -385,6 +458,8 @@ At Procurios isolated web components are conveniently named Component. Mind the 
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Delimit modifiers with two hyphens
 
 ```css
@@ -402,6 +477,8 @@ At Procurios isolated web components are conveniently named Component. Mind the 
 	...
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ## Selectors
 
@@ -424,6 +501,8 @@ header ul {
 	...
 }
 ```
+
+[↑ back to top](#table-of-contents)
 
 ### Aim to write reusable classes
 
@@ -451,15 +530,21 @@ input.button {
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Performance
 
 Performance of CSS selectors is more interesting than it is important with today's browsers. If you want to know more about selector parsing, [start here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS).
+
+[↑ back to top](#table-of-contents)
 
 ## Specificity
 
 ### Don't use IDs
 
 Not only are IDs inherently non-reusable, they are also vastly more specific than any other selector, and therefore become specificity anomalies.
+
+[↑ back to top](#table-of-contents)
 
 ### Use the least number of selectors required to style an element
 
@@ -475,6 +560,8 @@ Not only are IDs inherently non-reusable, they are also vastly more specific tha
 }
 ```
 
+[↑ back to top](#table-of-contents)
+
 ### Use `!important` with care
 
 The general rule is that `!important` is always a bad thing, but all rules have exceptions.
@@ -488,6 +575,8 @@ Proactive use of !important is when it is used before you’ve encountered any s
 ```
 
 Reactive use of `!important`` is when it is used to combat specificity problems. In these situations, it is preferable that you investigate and refactor any offending rulesets to try and bring specificity down across the board.
+
+[↑ back to top](#table-of-contents)
 
 ## Media queries
 
@@ -512,3 +601,5 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 	}
 }
 ```
+
+[↑ back to top](#table-of-contents)
