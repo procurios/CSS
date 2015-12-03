@@ -64,34 +64,16 @@ A typical CSS rule based on this style guide looks as following:
 
 MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) if you want to learn more.
 
-... and respect the maximum line length.
+### Place each selector on its own (new) line
 
 ```css
 /** bad */
-.FooComponent,
-.FooComponent--collapsed {
-	display: block;
-}
-
-.FooComponent, .FooComponent--collapsed, .BarComponent {
-	display: block;
-}
-
-.FooComponent, .FooComponent--collapsed, .FooComponent--collapsing, .FooComponent--collapsed {
-	display: block;
-}
-
-/** good */
 .FooComponent, .FooComponent--collapsed {
 	display: block;
 }
 
-.FooComponent, .FooComponent--collapsed,
-.BarComponent {
-	display: block;
-}
-
-.FooComponent, .FooComponent--collapsed, .FooComponent--collapsing,
+/** good */
+.FooComponent,
 .FooComponent--collapsed {
 	display: block;
 }
