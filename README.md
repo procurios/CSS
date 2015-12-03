@@ -524,7 +524,7 @@ Performance of CSS selectors is more interesting than it is important with today
 
 ### Don't use IDs
 
-Not only are IDs inherently non-reusable, they are also vastly more specific than any other selector, and therefore become specificity anomalies.
+Not only are IDs non-reusable, they are also vastly more specific than any other selector, and therefore become specificity anomalies. Learn more about using IDs in CSS selectors [here](http://oli.jp/2011/ids/).
 
 [↑ back to top](#table-of-contents)
 
