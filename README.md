@@ -546,7 +546,7 @@ Not only are IDs non-reusable, they are also vastly more specific than any other
 
 ### Use `!important` with care
 
-The general rule is that `!important` is always a bad thing, but all rules have exceptions.
+The general rule is that `!important` is always a bad thing, but all rules have exceptions. [Harry Roberts](http://cssguidelin.es/#important) makes a distinction between proactive and reactive use of `!important`.
 
 Proactive use of !important is when it is used before you’ve encountered any specificity problems; when it is used as a guarantee rather than as a fix. For example:
 
