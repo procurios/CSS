@@ -585,3 +585,19 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 ```
 
 [↑ back to top](#table-of-contents)
+
+## Element queries
+
+An "element query" is like a media query, specifically the 'width'/'height' MQs, but they apply to the width/height of the element's container, rather than of the screen or device.
+
+EQs aren't implemented by browsers yet. Tab Atkins explains [why EQs are difficult](http://www.xanthir.com/b4VG0):
+
+> Element Queries (let's just call them EQs from here on) suffer from basic circular dependency issues.
+>
+> Here's a simple example: Say you have an element which is normally 100px wide, but it uses an EQ to say that if its container is less than 200px wide, the element becomes 500px wide. (This is silly, but bear with me.) If the container is explicitly sized (width: 150px; or the like), this is fine, but if the container is sized to its contents (float: left;, for example), then you have a circular dependency: if the element is 100px wide, the container is 100px wide, but that trigger the EQ, so the element is 500px wide, so the container is 500px wide, but that disables the EQ, so the element is 100px wide, so the container is 100px wide, etc.
+
+In other words: browser vendors have some fundamental issues to deal with before EQs are shipped as native feature. Tab ends his overview with:
+
+> So that's the state of Element Queries in 2014. We're not really any closer to having them than we were in 2013, but there's light on the horizon for a possible good solution.
+
+That said, EQs are essential to create independant, isolated UI components. We've [published a Javascript library](https://github.com/procurios/ElementQueries) that takes care of this issue. The library contains [a comprehensive README](https://github.com/procurios/ElementQueries/blob/master/README.md) with clear instructions on how to implement and use element queries.
