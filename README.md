@@ -422,7 +422,7 @@ At Procurios isolated web components are conveniently named... `Component`. Mind
 
 [↑ back to top](#table-of-contents)
 
-### Delimit elements with two underscores
+### Delimit `Element`s with two underscores
 
 ```css
 /** bad */
@@ -442,7 +442,7 @@ At Procurios isolated web components are conveniently named... `Component`. Mind
 
 [↑ back to top](#table-of-contents)
 
-### Delimit modifiers with two hyphens
+### Delimit `Modifier`s with two hyphens
 
 ```css
 /** bad */
