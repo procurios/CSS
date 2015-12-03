@@ -258,9 +258,9 @@ Where possible, limit the length of a line to a maximum of 80 characters.
 
 ```css
 /**
- * This comment explains the following CSS in detail. A little bit too many details,
- * because the length of one line exceeds 120 characters. Hence, it's carefully
- * broken into pieces to enhance readability.
+ * This comment explains the following CSS in detail. A little bit too many
+ * details, because the length of one line exceeds 120 characters. Hence,
+ * it's carefully broken into pieces to enhance readability.
  */
 ```
 
