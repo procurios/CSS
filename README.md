@@ -398,7 +398,7 @@ To take an analogy:
 
 ### Use PascalCase when naming the `Block` of a Component
 
-At Procurios isolated web components are conveniently named Component. Mind the capital `C`. If the CSS belongs to a Component, use the name of the Component as block name.
+At Procurios isolated web components are conveniently named... `Component`. Mind the capital `C`. If the CSS belongs to a Component, use the name of the Component as block name.
 
 ```css
 /** bad */
