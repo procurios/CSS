@@ -155,9 +155,9 @@ For example:
 	left: 100px;
 	width: 1000px;
 	height: 1000px;
+	border: 1px solid #e5e5e5;
 	font: normal 13px "Helvetica Neue", sans-serif;
 	color: #444;
-	border: 1px solid #e5e5e5;
 	background: #f5f5f5;
 }
 ```
