@@ -40,7 +40,7 @@
 
 ## Introduction
 
-The CSS style guide in use at Procurios is based on the work of various sources in the past few years. Most of it is based on our own experience with maintaining a large codebase. An important source of inspiration is Harry Roberts, who published his work on [cssguidelin.es](http://cssguidelin.es/). Another inspiring source is [Code Guide, by @mdo](http://codeguide.co/).
+The CSS style guide in use at Procurios is based on various sources and experiences in the past few years. Most of it is based on our own experience with maintaining a large codebase. An important source of inspiration is Harry Roberts, who published his work on [cssguidelin.es](http://cssguidelin.es/). Another inspiring source is [Code Guide, by @mdo](http://codeguide.co/).
 
 ## Rules (anatomy and syntax)
 
