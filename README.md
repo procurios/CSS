@@ -346,7 +346,7 @@ Please note that multiple sections in 1 file might be a code smell. Consider spl
 
 ## Naming conventions
 
-We use a BEM-like naming convention. BEM, meaning _Block_, _Element_, _Modifier_, is a front-end methodology coined by developers working at Yandex. Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly and is adopted [from Harry Roberts guidelines](http://cssguidelin.es/#bem-like-naming).
+We use a BEM-like naming convention. BEM, meaning _Block_, _Element_, _Modifier_, is a front-end methodology [coined by developers working at Yandex](https://tech.yandex.com/bem/). Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly and is adopted [from Harry Roberts guidelines](http://cssguidelin.es/#bem-like-naming).
 
 BEM splits classes into three groups:
 
