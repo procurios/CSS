@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [Rules (anatomy and syntax)](#rules-anatomy-and-syntax)
-	- [Place related selectors on the same line](#place-related-selectors-on-the-same-line)
+	- [Place each selector on its own (new) line](#place-each-selector-on-its-own-new-line)
 	- [Place a property-value pair on the same line](#place-a-property-value-pair-on-the-same-line)
 	- [Place each declaration on its own (new) line](#place-each-declaration-on-its-own-new-line)
 	- [End each declaration with a semicolon](#end-each-declaration-with-a-semicolon)
@@ -36,6 +36,7 @@
 	- [Use the least number of selectors required to style an element](#use-the-least-number-of-selectors-required-to-style-an-element)
 	- [Use `!important` with care](#use-important-with-care)
 - [Media queries](#media-queries)
+- [Element queries](#element-queries)
 
 ## Introduction
 
