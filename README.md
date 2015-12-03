@@ -62,7 +62,7 @@ A typical CSS rule based on this style guide looks as following:
 }
 ```
 
-### Place related selectors on the same line
+MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) if you want to learn more.
 
 ... and respect the maximum line length.
 
