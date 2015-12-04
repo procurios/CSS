@@ -28,7 +28,7 @@
 	- [Delimit elements with two underscores](#delimit-elements-with-two-underscores)
 	- [Delimit modifiers with two hyphens](#delimit-modifiers-with-two-hyphens)
 - [Selectors](#selectors)
-	- [Use unambiguous and explicit selectors](#use-unambiguous-and-explicit-selectors)
+	- [Use classes to select elements](#use-classes-to-select-elements)
 	- [Aim to write reusable classes](#aim-to-write-reusable-classes)
 	- [Performance](#performance)
 - [Specificity](#specificity)
@@ -347,31 +347,7 @@ Please note that multiple sections in 1 file might be a code smell. Consider spl
 
 ## Naming conventions
 
-We use a BEM-like naming convention. BEM, meaning _Block_, _Element_, _Modifier_, is a front-end methodology [coined by developers working at Yandex](https://tech.yandex.com/bem/). Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly and is adopted [from Harry Roberts guidelines](http://cssguidelin.es/#bem-like-naming).
-
-BEM splits classes into three groups:
-
-- Block: The sole root of the component.
-- Element: A component part of the Block.
-- Modifier: A variant or extension of the Block.
-
-To take an analogy:
-
-```css
-.person {
-	...
-}
-
-.person__head {
-	...
-}
-
-.person--tall {
-	...
-}
-```
-
-[↑ back to top](#table-of-contents)
+We use a BEM like naming convention. Read more about it in our [HTML style guide repository](https://github.com/procurios/HTML).
 
 ### Use camelCase when naming class groups
 
@@ -471,7 +447,13 @@ I quote [Harry Roberts](http://cssguidelin.es/#css-selectors):
 >
 > CSS cannot be encapsulated, it is inherently leaky, but we can mitigate some of these effects by not writing such globally-operating selectors: **your selectors should be as explicit and well reasoned as your reason for wanting to select something**.
 
-### Use unambiguous and explicit selectors
+### Use classes to select elements
+
+The reasoning behind using only classnames to select elements:
+
+- The CSS is _decoupled_: The dependency on the DOM is kept to a minimum. It makes it much easier to move your CSS around.
+- The CSS is _isolated_: Classnames based on our naming convention are scoped to a specific `Block`.
+- The CSS is _descriptive_: Classnames based on our naming convention tell developers stuff about what they're styling.
 
 ```css
 /** bad */
@@ -484,6 +466,8 @@ header ul {
 	...
 }
 ```
+
+Don't worry about unavoidable exceptions to this rule. Use it as a rule of thumb.
 
 [↑ back to top](#table-of-contents)
 
@@ -500,16 +484,6 @@ Reusable classes can be moved, recycled and duplicated across projects. They are
 /** good */
 .metaData__label {
 	font-weight: bold;
-}
-
-/** bad */
-input.button {
-	background: red;
-}
-
-/** good */
-.btn {
-	background: red;
 }
 ```
 
