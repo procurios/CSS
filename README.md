@@ -23,10 +23,6 @@
 	- [Use sectioning comments if 1 CSS file contains multiple sections](#use-sectioning-comments-if-1-css-file-contains-multiple-sections)
 	- [Use inline comments to explain a specific rule or declaration](#use-inline-comments-to-explain-a-specific-rule-or-declaration)
 - [Naming conventions](#naming-conventions)
-	- [Use camelCase when naming class groups](#use-camelcase-when-naming-class-groups)
-	- [Use PascalCase when naming the `Block` of a Component](#use-pascalcase-when-naming-the-block-of-a-component)
-	- [Delimit elements with two underscores](#delimit-elements-with-two-underscores)
-	- [Delimit modifiers with two hyphens](#delimit-modifiers-with-two-hyphens)
 - [Selectors](#selectors)
 	- [Use classes to select elements](#use-classes-to-select-elements)
 	- [Aim to write reusable classes](#aim-to-write-reusable-classes)
@@ -56,7 +52,7 @@ The combination of a `property` and a `value` is called a `declaration`.
 A typical CSS rule based on this style guide looks as following:
 
 ```css
-.FooComponent {
+.fooBlock {
 	display: block;
 	text-align: center;
 	color: #fff;
@@ -69,13 +65,13 @@ MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/W
 
 ```css
 /** bad */
-.FooComponent, .FooComponent--collapsed {
+.fooBlock, .fooBlock--collapsed {
 	display: block;
 }
 
 /** good */
-.FooComponent,
-.FooComponent--collapsed {
+.fooBlock,
+.fooBlock--collapsed {
 	display: block;
 }
 ```
@@ -86,13 +82,13 @@ MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/W
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 	display:
 		block;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 }
 ```
@@ -103,12 +99,12 @@ MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/W
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 	display: block; float: left;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 	float: left;
 }
@@ -120,13 +116,13 @@ MDN has [a great piece on CSS syntax](https://developer.mozilla.org/en-US/docs/W
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 	display: block;
 	float: left
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 	float: left;
 }
@@ -171,16 +167,16 @@ For example:
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 ∙∙∙∙display: block;
 }
 
-.FooComponent {
+.fooBlock {
 ∙∙display: block;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 }
 ```
@@ -191,12 +187,12 @@ For example:
 
 ```css
 /** bad */
-.FooComponent{
+.fooBlock{
 	display: block;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 }
 ```
@@ -207,13 +203,13 @@ For example:
 
 ```css
 /** bad */
-.FooComponent {	display: block; }
+.fooBlock {	display: block; }
 
-.FooComponent {
+.fooBlock {
 	display: block; }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 }
 ```
@@ -224,12 +220,12 @@ For example:
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 	display:block;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 }
 ```
@@ -240,12 +236,12 @@ For example:
 
 ```css
 /** bad */
-.FooComponent {	display: block;
+.fooBlock {	display: block;
 	color: #fff;
 }
 
 /** good */
-.FooComponent {
+.fooBlock {
 	display: block;
 	color: #fff;
 }
@@ -277,28 +273,28 @@ Our naming convention should be sufficient to visualize relations between rules.
 
 ```css
 /** bad */
-.FooComponent {
+.fooBlock {
 	...
 }
 
-	.FooComponent__bar {
+	.fooBlock__bar {
 		...
 	}
 
-		.FooComponent__baz {
+		.fooBlock__baz {
 
 		}
 
 /** good */
-.FooComponent {
+.fooBlock {
 	...
 }
 
-.FooComponent__bar {
+.fooBlock__bar {
 	...
 }
 
-.FooComponent__baz {
+.fooBlock__baz {
 
 }
 ```
@@ -334,11 +330,11 @@ Please note that multiple sections in 1 file might be a code smell. Consider spl
 
 ```css
 /** This rule needs some explanation */
-.FooComponent {
+.fooBlock {
 	overflow: hidden;
 }
 
-.FooComponent {
+.fooBlock {
 	overflow: hidden; /** This declaration needs some explanation */
 }
 ```
@@ -348,96 +344,6 @@ Please note that multiple sections in 1 file might be a code smell. Consider spl
 ## Naming conventions
 
 We use a BEM like naming convention. Read more about it in our [HTML style guide repository](https://github.com/procurios/HTML).
-
-### Use camelCase when naming class groups
-
-```css
-/** bad */
-.sub-content {
-	...
-}
-
-.subContent__call-to-action {
-	...
-}
-
-/** good */
-.subContent {
-	...
-}
-
-.subContent__callToAction {
-	...
-}
-```
-
-[↑ back to top](#table-of-contents)
-
-### Use PascalCase when naming the `Block` of a Component
-
-At Procurios isolated web components are conveniently named... `Component`. Mind the capital `C`. If the CSS belongs to a Component, use the name of the Component as block name.
-
-```css
-/** bad */
-.filterPanel {
-	...
-}
-
-.filterPanel__innerContainer {
-
-}
-
-/** good */
-.FilterPanel {
-	...
-}
-
-.FilterPanel__innerContainer {
-	...
-}
-```
-
-[↑ back to top](#table-of-contents)
-
-### Delimit `Element`s with two underscores
-
-```css
-/** bad */
-.FooComponent-footer {
-	...
-}
-
-.fooComponentFooter {
-	...
-}
-
-/** good */
-.FooComponent__footer {
-	...
-}
-```
-
-[↑ back to top](#table-of-contents)
-
-### Delimit `Modifier`s with two hyphens
-
-```css
-/** bad */
-.FooComponent-collapsed {
-	...
-}
-
-.collapsedFooComponent {
-	...
-}
-
-/** good */
-.FooComponent--collapsed {
-	...
-}
-```
-
-[↑ back to top](#table-of-contents)
 
 ## Selectors
 
@@ -507,12 +413,12 @@ Not only are IDs non-reusable, they are also vastly more specific than any other
 
 ```css
 /** bad */
-.FooComponent > .FooComponent__title {
+.fooBlock > .fooBlock__title {
 	color: hotpink;
 }
 
 /** good */
-.FooComponent__title {
+.fooBlock__title {
 	color: hotpink;
 }
 ```
@@ -531,7 +437,7 @@ Proactive use of !important is when it is used before you’ve encountered any s
 }
 ```
 
-Reactive use of `!important`` is when it is used to combat specificity problems. In these situations, it is preferable that you investigate and refactor any offending rulesets to try and bring specificity down across the board.
+Reactive use of `!important` is when it is used to combat specificity problems. In these situations, it is preferable that you investigate and refactor any offending rulesets to try and bring specificity down across the board.
 
 [↑ back to top](#table-of-contents)
 
@@ -540,20 +446,20 @@ Reactive use of `!important`` is when it is used to combat specificity problems.
 Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
 
 ```css
-.FooComponent {
+.fooBlock {
 	...
 }
 
-.FooComponent__avatar {
+.fooBlock__avatar {
 	...
 }
 
 @media (min-width: 480px) {
-	.FooComponent {
+	.fooBlock {
 		...
 	}
 
-	.FooComponent__avatar {
+	.fooBlock__avatar {
 		...
 	}
 }
