@@ -269,7 +269,7 @@ There will be unavoidable exceptions to this rule (fe. URLs, gradient syntax).
 
 ### Don't indent related rules / rulesets
 
-Our naming convention should be sufficient to visualize relations between rules.
+Our [naming convention](https://github.com/procurios/HTML) should be sufficient to visualize relations between rules.
 
 ```css
 /** bad */
